@@ -52,8 +52,8 @@
 
         #stage {
             position: relative;
-            height: 80%;
-            width: 80%;
+            height: 40%;
+            width: 40%;
             background-color: #40bfff;
             background-size: contain;
             background-repeat: repeat-x;
@@ -72,18 +72,20 @@
             z-index: 99999999999;
             position: relative;
             content: '';
-            background-image: url(tv.png);
+            background-image: url('https://e7.pngegg.com/pngimages/806/879/png-clipart-new-nintendo-3ds-video-game-nintendo-ds-nintendo-electronics-gadget-thumbnail.png');
             border-radius: 1em;
             background-size: cover;
-            box-shadow: 0 0 30px 15px rgba(255, 255, 255, 0.5);
+            background-color: transparent; /* Make background transparent */
+            box-shadow: 0 0 30px 15px rgba(255, 255, 255, 0.5); /* White aura effect */
+            filter: brightness(1.2); /* Make Nintendo DS image brighter */
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
         .scanlines {
-            height: 60vh;
-            width: 60vw;
+            height: 40%;
+            width: 40%;
             z-index: 999999999;
             position: absolute;
             opacity: 0.4;
@@ -98,7 +100,7 @@
 
         #stats_pane {
             position: absolute;
-            left: 10px;
+            right: 10px;
             top: 10px;
             padding: 5px;
             font-size: 16pt;
@@ -165,6 +167,24 @@
         }
     </style>
     <script type="text/javascript" src="gameengine.js"></script>
+    <script type="text/javascript">
+        function generateNewLevel() {
+            // Logic to generate a new level
+            console.log("New level generated!");
+            // Add your level generation logic here
+        }
+
+        // Detect when a new level is loaded
+        function detectNewLevel() {
+            // Assuming there's a mechanism to detect level changes
+            // For demonstration, we'll just call generateNewLevel periodically
+            setInterval(generateNewLevel, 10000); // Generate a new level every 10 seconds
+        }
+
+        $(document).ready(function() {
+            detectNewLevel();
+        });
+    </script>
 </head>
 <body>
     <div class="tv">
