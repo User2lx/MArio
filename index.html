@@ -18,6 +18,11 @@
             height: 100%;
             width: 100%;
             overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://blenderartists.org/uploads/default/original/4X/0/4/6/046c26221f4f35d9b3692645bd5e6df2fb738e3c.jpeg');
+            background-size: cover;
         }
 
         *:not(a) {
@@ -48,8 +53,8 @@
 
         #stage {
             position: relative;
-            height: 100vh;
-            width: 100vw;
+            height: 60vh;
+            width: 60vw;
             margin: 0;
             background-color: #40bfff;
             background-size: contain;
@@ -66,8 +71,8 @@
 
         .tv {
             background-repeat: no-repeat;
-            height: 100vh;
-            width: 100vw;
+            height: 60vh;
+            width: 60vw;
             z-index: 99999999999;
             position: absolute;
             content: '';
@@ -76,11 +81,12 @@
             background-size: cover;
             top: 0;
             left: 0;
+            box-shadow: 0 0 30px 15px rgba(255, 255, 255, 0.5);
         }
 
         .scanlines {
-            height: 100vh;
-            width: 100vw;
+            height: 60vh;
+            width: 60vw;
             z-index: 999999999;
             position: absolute;
             opacity: 0.4;
@@ -164,7 +170,6 @@
     <script type="text/javascript" src="gameengine.js"></script>
 </head>
 <body>
-
     <div class="tv"></div>
     <div class="scanlines"></div>
     <div id="stats_pane">
